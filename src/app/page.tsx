@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Header from "@/components/Header/Header";
+import HeroCarousal from "@/components/Hero/HeroCarousal";
 
 
 
@@ -8,7 +9,8 @@ export default function Home() {
     <>
 
     <Header />
+    <HeroCarousal />
     
-      <h1>Home</h1> </>
+     </>
   );
 }
