@@ -42,12 +42,18 @@ const HeroCarousel = () => {
     setIndex((prevIndex - 1 + heroImages.length) % heroImages.length);
   };
 
+  const handleLinkClick = (e) => {
+    e.preventDefault();
+    // Prevent page jump on link click
+    // Optionally add custom behavior for link navigation here
+  };
+
   return (
     <div className="relative w-full overflow-hidden" style={{ height: "75vh" }}>
       <AnimatePresence>
         {heroImages.map((image, i) =>
           i === index ? (
-            <Link href={image.link} key={i}>
+            <Link href={image.link} key={i} onClick={handleLinkClick}>
               <motion.div
                 className="absolute inset-0 bg-cover bg-center cursor-pointer"
                 style={{ backgroundImage: `url(${image.src})` }}
