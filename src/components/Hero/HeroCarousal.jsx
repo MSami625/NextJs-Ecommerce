@@ -44,8 +44,6 @@ const HeroCarousel = () => {
 
   const handleLinkClick = (e) => {
     e.preventDefault();
-    // Prevent page jump on link click
-    // Optionally add custom behavior for link navigation here
   };
 
   return (

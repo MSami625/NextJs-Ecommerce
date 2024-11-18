@@ -58,13 +58,14 @@ const collections = [
 const Collections = () => {
   return (
     <div className="w-full mx-auto my-8 px-11 lg:px-12 md:px-4 hidden md:block">
+      <hr />
       <h2 className="text-center text-2xl font-semibold mb-6">Collections</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {collections.map((collection, index) => (
           <Link
             key={index}
             href={`/collection/${encodeURIComponent(collection.title.replace(/ /g, '-').toLowerCase())}`}
-            className="flex flex-col items-center group"  // Add group class for hover effects
+            className="flex flex-col items-center group"  
           >
             <div className="relative w-full h-60 bg-gray-200 rounded-lg overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-300 ease-in-out">
               <Image

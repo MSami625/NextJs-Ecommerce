@@ -35,6 +35,7 @@ const ShopTheLook = () => {
 
   return (
     <div className="px-10 py-10">
+      <hr />
       <h2 className="text-center text-3xl font-semibold mb-8">SHOP THE LOOK</h2>
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center max-w-[80%] mx-auto">
         {products.map((product, index) => (
