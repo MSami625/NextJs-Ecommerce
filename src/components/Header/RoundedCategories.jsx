@@ -15,7 +15,7 @@ const Categories = [
 
 const RoundedCategories = () => {
   return (
-    <div className="bg-white border-t border-b border-gray-200 md:hidden">
+    <div className="bg-white border-t border-b border-gray-200 md:hidden overflow-hidden">
       <motion.div
         className="flex py-4 px-6 space-x-4"
         drag="x"

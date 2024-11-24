@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import "keen-slider/keen-slider.min.css";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Hero/Footer";
+
+
 
 
 
@@ -34,7 +38,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

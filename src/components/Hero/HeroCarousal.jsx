@@ -39,7 +39,7 @@ const HeroCarousel = () => {
   };
 
   const handlePrev = () => {
-    setIndex((prevIndex - 1 + heroImages.length) % heroImages.length);
+    setIndex((prevIndex) => (prevIndex - 1 + heroImages.length) % heroImages.length);
   };
 
   const handleLinkClick = (e) => {
