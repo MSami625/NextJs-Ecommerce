@@ -1,22 +1,5 @@
 const LittleBoxSection = () => {
-    const features = [
-      {
-        icon: "littleboxindia.com/cdn/shop/files/dsvdsvdsv_2_180x.png?v=1670488714",
-        title: "Fast Delivery",
-      },
-      {
-        icon: "https://via.placeholder.com/64?text=Icon+2",
-        title: "New Styles",
-      },
-      {
-        icon: "https://via.placeholder.com/64?text=Icon+3",
-        title: "Best fit",
-      },
-      {
-        icon: "https://via.placeholder.com/64?text=Icon+4",
-        title: "Easy exchange",
-      },
-    ];
+    
   
     return (
       <section className="text-center py-10 bg-white border border-t-gray-800">

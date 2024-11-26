@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";  // Import Next.js Image component
 
 const BestSellers = () => {
   const products = [
@@ -75,7 +76,7 @@ const BestSellers = () => {
   return (
     <div className="container mx-auto py-8 ">
         <hr />
-      <div className="flex justify-between items-center  mb-6">
+      <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl m-auto font-bold">BEST SELLERS</h1>
         <Link href="collection/best-sellers" className="text-red-500 text-sm font-semibold">
           VIEW ALL
@@ -95,9 +96,11 @@ const BestSellers = () => {
                 exit={{ opacity: 0 }}
                 className="w-full h-64 overflow-hidden"
               >
-                <img
+                <Image
                   src={product.images[currentImage[index]]}
                   alt={product.name}
+                  width={300}  // Specify width for the image
+                  height={400} // Specify height for the image
                   className="w-full h-full object-cover"
                 />
               </motion.div>
@@ -124,10 +127,10 @@ const BestSellers = () => {
                 {product.name}
               </h3>
               <div className="flex items-center gap-2">
-              <p className="text-gray-500 text-xs line-through">
-                {product.originalPrice}
-              </p>
-              <p className="text-red-500 text-sm font-bold">{product.salePrice}</p>
+                <p className="text-gray-500 text-xs line-through">
+                  {product.originalPrice}
+                </p>
+                <p className="text-red-500 text-sm font-bold">{product.salePrice}</p>
               </div>
               <button className="w-full mt-4 bg-black text-white text-sm py-2 rounded-md">
                  BUY

@@ -20,13 +20,14 @@ const navLinks = [
 const TopNavbar = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
+  const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
+
 
   const openSearchModal = () => setIsSearchOpen(true);
   const closeSearchModal = () => setIsSearchOpen(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const toggleDropdown = (index: any) => {
+  const toggleDropdown = (index: number) => {
     setOpenDropdownIndex(openDropdownIndex === index ? null : index);
   };
 

@@ -1,6 +1,7 @@
 "use client";
 import Link from 'next/link';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const collections = Array.from({ length: 60 }, (_, index) => ({
   id: index + 1,
@@ -9,7 +10,7 @@ const collections = Array.from({ length: 60 }, (_, index) => ({
 }));
 
 const CollectionsGrid = () => {
-  const itemsPerPage = 30; 
+  const itemsPerPage = 30;
   const totalPages = Math.ceil(collections.length / itemsPerPage);
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -43,9 +44,11 @@ const CollectionsGrid = () => {
               className="flex flex-col items-center cursor-pointer"
               style={{ height: '250px', width: '200px' }}
             >
-              <img
+              <Image
                 src={collection.image}
                 alt={collection.name}
+                width={200}
+                height={250}
                 className="w-full h-full object-cover mb-2"
               />
               <p className="text-center text-lg font-medium">{collection.name}</p>

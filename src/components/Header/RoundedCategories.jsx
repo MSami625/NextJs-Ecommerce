@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Categories = [
   { name: "New In", image: "https://littleboxindia.com/cdn/shop/files/Best_sellers_gif.gif?v=1709623355" },
@@ -29,9 +30,11 @@ const RoundedCategories = () => {
           >
             <div className="flex flex-col items-center">
               <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-gray-200 flex items-center justify-center">
-                <img
+                <Image
                   src={category.image}
                   alt={category.name}
+                  width={64} // Width of 64px
+                  height={64} // Height of 64px
                   className="w-full h-full object-cover"
                 />
               </div>
